@@ -432,9 +432,7 @@
         <param name="haslabel" default="true" />
         <param name="hasspinner" default="true" />
         <param name="hasprogress" default="false" />
-        <param name="texture" default="dialog/loading-back.png" />
         <param name="size" default="100" />
-        <param name="icon" default="special://skin/extras/icons/kodi.png" />
         <param name="progress" default="Control.GetLabel(32)" />
         <param name="progress_id" default="32" />
         <param name="spinprogress" default="false" />
@@ -463,7 +461,7 @@
                 <include content="Object_Control" condition="$PARAM[hasspinner]">
                     <param name="control" value="group" />
                     <description>Busy animation</description>
-                    <animation effect="rotate" condition="$PARAM[spinspinner]" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                    <animation effect="rotate" condition="$PARAM[spinspinner]" start="180" end="-180" loop="true" time="1000" center="auto">Conditional</animation>
                     <control type="image">
                         <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
@@ -471,14 +469,14 @@
                     <control type="image">
                         <texture colordiffuse="$VAR[ColorGradient]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
-                        <animation effect="fade" condition="$PARAM[spinspinner]" start="0" end="100" pulse="true" time="1000">Conditional</animation>
+                        <animation effect="fade" condition="$PARAM[spinspinner]" start="0" end="100" pulse="true" time="1500">Conditional</animation>
                     </control>
                 </include>
 
                 <include content="Object_Control" condition="$PARAM[hasprogress]">
                     <param name="control" value="group" />
                     <description>Busy animation</description>
-                    <animation effect="rotate" condition="$PARAM[spinprogress]" start="0" end="360" loop="true" time="2000" center="auto">Conditional</animation>
+                    <animation effect="rotate" condition="$PARAM[spinprogress]" start="180" end="-180" loop="true" time="10000" center="auto">Conditional</animation>
                     <control type="image">
                         <texture colordiffuse="$VAR[ColorHighlight]">$INFO[$PARAM[progress],progress/circle/p,.png]</texture>
                         <aspectratio align="center" aligny="center">keep</aspectratio>
@@ -665,75 +663,16 @@
 
     <include name="Object_StartUp_Logo">
         <control type="grouplist">
-            <height>128</height>
-            <centertop>400</centertop>
+            <height>512</height>
+            <centertop>450</centertop>
             <orientation>vertical</orientation>
             <align>center</align>
             <control type="image">
-                <width>96</width>
-                <height>96</height>
+                <width>512</width>
+                <height>512</height>
                 <centerleft>50%</centerleft>
                 <aspectratio>keep</aspectratio>
-                <texture colordiffuse="$VAR[ColorHighlight]">special://skin/extras/icons/kodi.png</texture>
-            </control>
-            <control type="label">
-                <height>32</height>
-                <textcolor>main_fg_100</textcolor>
-                <label>KODI</label>
-                <font>font_logo_large</font>
-                <align>center</align>
-            </control>
-        </control>
-        <control type="label">
-            <height>80</height>
-            <centertop>49%</centertop>
-            <aligny>center</aligny>
-            <align>center</align>
-            <font>font_info_black</font>
-            <textcolor>$VAR[ColorHighlight]</textcolor>
-            <label>[COLOR=main_logo]Arctic[/COLOR] Horizon 2</label>
-        </control>
-        <control type="group">
-            <bottom>80</bottom>
-            <height>140</height>
-            <centerleft>50%</centerleft>
-            <width>600</width>
-            <visible>Weather.IsFetched</visible>
-            <animation effect="fade" reversible="false" start="0" end="100" time="300" delay="0">Visible</animation>
-            <control type="grouplist">
-                <orientation>horizontal</orientation>
-                <align>center</align>
-                <height>100</height>
-                <top>0</top>
-                <control type="image">
-                    <centertop>50%</centertop>
-                    <width>90</width>
-                    <height>90</height>
-                    <aspectratio>keep</aspectratio>
-                    <texture colordiffuse="main_fg_90">$INFO[Window(Weather).Property(Current.FanartCode),resource://resource.images.weathericons.white/,.png]</texture>
-                    <visible>!String.IsEmpty(Window(Weather).Property(Current.FanartCode))</visible>
-                </control>
-                <control type="label">
-                    <left>-10</left>
-                    <label>$INFO[Window(Weather).Property(Current.Temperature), [B],[/B]°]</label>
-                    <width>auto</width>
-                    <height>90</height>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>font_info_black</font>
-                    <textcolor>main_fg_90</textcolor>
-                    <visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
-                </control>
-            </control>
-            <control type="label">
-                <label>$INFO[Window(Weather).Property(Current.Condition)]</label>
-                <height>20</height>
-                <centerbottom>20</centerbottom>
-                <align>center</align>
-                <aligny>center</aligny>
-                <font>font_main</font>
-                <textcolor>main_fg_90</textcolor>
-                <visible>!String.IsEmpty(Window(Weather).Property(Current.Condition))</visible>
+                <texture>special://skin/media/kodi-portrait-darkbg.png</texture>
             </control>
         </control>
     </include>
@@ -1159,7 +1098,6 @@
     </include>
 
     <include name="Object_Options_Menu_Popup">
-        <param name="icon" default="special://skin/extras/icons/kodi.png" />
         <param name="header" default="$LOCALIZE[33063]" />
         <param name="id" default="9000" />
         <param name="groupid" default="89000" />
@@ -1282,7 +1220,6 @@
     </include>
 
     <include name="Object_Options_Menu">
-        <param name="icon" default="special://skin/extras/icons/kodi.png" />
         <param name="header" default="$LOCALIZE[33063]" />
         <param name="id" default="9000" />
         <param name="groupid" default="89000" />
@@ -1755,7 +1692,6 @@
     </include>
 
     <include name="Object_MenuHeader">
-        <param name="icon" default="special://skin/extras/icons/kodi.png" />
         <param name="label" default="$LOCALIZE[33063]" />
         <param name="has_icon" default="true" />
         <param name="colordiffuse" default="$VAR[ColorHighlight]" />

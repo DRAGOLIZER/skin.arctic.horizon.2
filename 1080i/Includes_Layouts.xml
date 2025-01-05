@@ -80,17 +80,18 @@
                     <include condition="$PARAM[selected]">Color_SelectedText</include>
                     <right>grid_x04</right>
                     <left>grid_x04</left>
+                    <top>5</top>
                     <textcolor>main_fg_70</textcolor>
                     <selectedcolor>main_fg_70</selectedcolor>
                     <font>font_main</font>
-                    <align>right</align>
+                    <align>left</align>
                     <label>$INFO[ListItem.ChannelNumberLabel]</label>
                 </include>
                 <include content="Object_Control" condition="!$PARAM[detailed]">
                     <param name="control">label</param>
                     <include condition="$PARAM[selected]">Color_SelectedText</include>
                     <right>grid_x04</right>
-                    <left>grid_x04</left>
+                    <left>grid_x11</left>
                     <textcolor>main_fg_70</textcolor>
                     <selectedcolor>main_fg_70</selectedcolor>
                     <font>font_main_bold</font>
@@ -466,8 +467,8 @@
                 <include content="Object_Control">
                     <param name="control">label</param>
                     <include condition="$PARAM[selected]">Color_SelectedText</include>
-                    <right>grid_x04</right>
-                    <left>grid_x04</left>
+                    <right>-grid_x04</right>
+                    <left>grid_x11</left>
                     <textcolor>dialog_fg_70</textcolor>
                     <selectedcolor>dialog_fg_70</selectedcolor>
                     <label>$INFO[ListItem.Label]</label>
@@ -475,7 +476,7 @@
             </control>
             <control type="group">
                 <width>$PARAM[item_h]</width>
-                <right>grid_x02</right>
+                <left>grid_x02</left>
                 <include content="Object_Control">
                     <param name="control">image</param>
                     <include content="Object_ColorDiffuse" condition="$PARAM[selected]">

@@ -1610,7 +1610,7 @@
                 <!-- Season Total Episodes and Unwatched -->
                 <include content="Info_Codec_Label">
                     <param name="icon" value="special://skin/extras/icons/square-poll-horizontal.png" />
-                    <param name="label" value="$INFO[ListItem.Property(TotalEpisodes),[B],[/B] $LOCALIZE[20360]   ]$INFO[ListItem.Property(WatchedEpisodes),[B],[/B] $LOCALIZE[16102]]" />
+                    <param name="label" value="$INFO[ListItem.Property(TotalEpisodes),[B],[/B] $LOCALIZE[20360]]" />
                     <visible>String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)</visible>
                     <visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
                 </include>

@@ -29,7 +29,7 @@
             <param name="groupid" value="5101" />
             <param name="sliceid" value="5201" />
             <param name="label" value="$INFO[Control.GetLabel(12)]" />
-            <param name="icon" value="special://skin/extras/icons/play3.png" />
+            <param name="icon" value="special://skin/extras/icons/circle-chevron-right.png" />
             <param name="visible" value="Control.IsEnabled(12)" />
             <onclick>SendClick(12)</onclick>
             <include content="OSD_Button_HintLabel">
@@ -205,7 +205,7 @@
                 <param name="label">$LOCALIZE[20410]</param>
             </include>
         </include>
-        <include content="OSD_Button">
+        <!--<include content="OSD_Button">
             <param name="vertical">true</param>
             <param name="id" value="5010" />
             <param name="groupid" value="5110" />
@@ -216,8 +216,8 @@
             <include content="OSD_Button_HintLabel">
                 <param name="label">$LOCALIZE[33029]</param>
             </include>
-        </include>
-        <include content="OSD_Button">
+        </include>-->
+        <!--<include content="OSD_Button">
             <param name="vertical">true</param>
             <param name="id" value="5003" />
             <param name="groupid" value="5103" />
@@ -233,7 +233,7 @@
             <include content="OSD_Button_HintLabel">
                 <param name="label">$LOCALIZE[137]</param>
             </include>
-        </include>
+        </include>-->
         <include content="OSD_Button">
             <param name="vertical">true</param>
             <param name="id" value="5004" />
@@ -780,7 +780,7 @@
                     <onclick>SetFocus(50)</onclick>
                     <onclick>ActivateWindow(1113)</onclick>
                 </include>
-                <include content="Items_QuickNav_Button">
+                <!--<include content="Items_QuickNav_Button">
                     <param name="itemgap" value="$PARAM[itemgap]" />
                     <param name="icon" value="special://skin/extras/icons/search.png" />
                     <param name="id" value="02" />
@@ -790,7 +790,7 @@
                     <ondown>$PARAM[ondown]</ondown>
                     <onclick condition="!Window.IsActive(1114)">ActivateWindow(1114)</onclick>
                     <onclick condition="Window.IsActive(1114)">ReplaceWindow(1197)</onclick>
-                </include>
+                </include>-->
                 <include content="Items_QuickNav_Button">
                     <param name="itemgap" value="$PARAM[itemgap]" />
                     <param name="icon" value="special://skin/extras/icons/globe.png" />
@@ -799,7 +799,7 @@
                     <onup>$PARAM[onup]</onup>
                     <ondown>$PARAM[ondown]</ondown>
                 </include>
-                <include content="Items_QuickNav_Button">
+                <!--<include content="Items_QuickNav_Button">
                     <param name="itemgap" value="$PARAM[itemgap]" />
                     <param name="icon" value="special://skin/extras/icons/fire2.png" />
                     <param name="id" value="04" />
@@ -807,8 +807,8 @@
                     <ondown>$PARAM[ondown]</ondown>
                     <onclick>SetFocus(50)</onclick>
                     <onclick>AlarmClock(DelayCommand,RunScript(plugin.video.themoviedb.helper,related_lists,query=$VAR[Path_ContextParams_Query],tmdb_type=$VAR[Path_ContextParams_TMDbType]),00:01,silent)</onclick>
-                </include>
-                <include content="Items_QuickNav_Button">
+                </include>-->
+                <!--<include content="Items_QuickNav_Button">
                     <param name="itemgap" value="$PARAM[itemgap]" />
                     <param name="icon" value="special://skin/extras/icons/binoculars.png" />
                     <param name="id" value="05" />
@@ -816,7 +816,7 @@
                     <ondown>$PARAM[ondown]</ondown>
                     <onclick condition="![String.IsEqual(Container(99950).ListItem.Property(base_dbtype),tvshow) | String.IsEqual(Container(99950).ListItem.Property(base_dbtype),season) | String.IsEqual(Container(99950).ListItem.Property(base_dbtype),episode)]">ActivateWindow(videos,plugin://plugin.video.themoviedb.helper/?info=user_discover&amp;tmdb_type=movie,return)</onclick>
                     <onclick condition="[String.IsEqual(Container(99950).ListItem.Property(base_dbtype),tvshow) | String.IsEqual(Container(99950).ListItem.Property(base_dbtype),season) | String.IsEqual(Container(99950).ListItem.Property(base_dbtype),episode)]">ActivateWindow(videos,plugin://plugin.video.themoviedb.helper/?info=user_discover&amp;tmdb_type=tv,return)</onclick>
-                </include>
+                </include>-->
             </control>
             <control type="image" id="8200">
                 <top>-1</top>

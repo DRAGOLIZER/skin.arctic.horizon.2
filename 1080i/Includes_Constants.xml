@@ -14,6 +14,7 @@
     <constant name="grid_x04">40</constant>
     <constant name="grid_x06">60</constant>
     <constant name="grid_x08">80</constant>
+    <constant name="grid_x11">110</constant>
     <constant name="grid_x12">120</constant>
     <constant name="grid_x14">140</constant>
     <constant name="grid_x16">160</constant>
@@ -23,7 +24,9 @@
     <constant name="grid_x30">300</constant>
     <constant name="grid_x32">320</constant>
     <constant name="grid_x36">360</constant>
+    <constant name="grid_x38">380</constant>
     <constant name="grid_x40">400</constant>
+    <constant name="grid_x42">420</constant>
     <constant name="grid_x44">440</constant>
     <constant name="grid_x48">480</constant>
     <constant name="grid_x52">520</constant>

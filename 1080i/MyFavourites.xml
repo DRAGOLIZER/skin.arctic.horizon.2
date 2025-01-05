@@ -23,7 +23,7 @@
                 <bottom>grid_x04</bottom>
                 <control type="grouplist" id="6000">
                     <onright>50</onright>
-                    <include content="Dialog_Menu_Button">
+                    <include content="Dialog_Side_Menu_Button">
                         <param name="id">9004</param>
                         <param name="groupid">9104</param>
                         <param name="control">button</param>
@@ -32,7 +32,7 @@
                         <label>$INFO[Container.ViewMode,$LOCALIZE[31114]: ,]</label>
                         <onclick>Container.NextViewMode</onclick>
                     </include>
-                    <include content="Dialog_Menu_Button">
+                    <include content="Dialog_Side_Menu_Button">
                         <param name="id">9002</param>
                         <param name="groupid">9102</param>
                         <param name="control">button</param>
@@ -41,7 +41,7 @@
                         <label>$INFO[Container.SortMethod,$LOCALIZE[31016]: ,]</label>
                         <onclick>Container.NextSortMethod</onclick>
                     </include>
-                    <include content="Dialog_Menu_Button">
+                    <include content="Dialog_Side_Menu_Button">
                         <param name="id">4</param>
                         <param name="groupid">9103</param>
                         <param name="control">togglebutton</param>
@@ -51,7 +51,7 @@
                         <altlabel>$LOCALIZE[31015]: $LOCALIZE[585]</altlabel>
                         <usealttexture>Container.SortDirection(Descending)</usealttexture>
                     </include>
-                    <include content="Dialog_Menu_Button">
+                    <include content="Dialog_Side_Menu_Button">
                         <param name="id">19</param>
                         <param name="groupid">9101</param>
                         <param name="control">edit</param>
